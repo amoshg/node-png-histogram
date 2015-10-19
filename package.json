@@ -1,0 +1,24 @@
+{
+  "name": "node-png-histogram",
+  "version": "0.0.1",
+  "description": "Convert an array of values into a histogram in png format",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amoshg/node-png-histogram.git"
+  },
+  "keywords": [
+    "histogram",
+    "node"
+  ],
+  "author": "Amin Moshgabadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amoshg/node-png-histogram/issues"
+  },
+  "homepage": "https://github.com/amoshg/node-png-histogram",
+  "dependencies": {
+    "accum": "^0.3.6",
+    "pngjs": "^0.4.0"
+  }
+}
