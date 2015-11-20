@@ -38,7 +38,7 @@ nodeHistogram.prototype.generatePNG = function (callback) {
 
   for (var y = 0; y < this.height; y++) {
     for (var x = 0; x < this.width; x++) {
-      if (!this.pattern || y % 10) {
+      if (!this.pattern || y % 2) {
         idx = (this.width * (this.height - y - ((this.mirror ? this.height / 2 : 0))) + (this.width - x)) << 2;
         dIdx = Math.floor(x / barThreshold);
         //If we are not drawing anything for this pixel go to the next one
