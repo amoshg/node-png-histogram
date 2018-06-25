@@ -42,7 +42,7 @@ nodeHistogram.prototype.generatePNG = function (callback) {
         idx = (this.width * (this.height - y - ((this.mirror ? this.height / 2 : 0))) + (this.width - x)) << 2;
         dIdx = Math.floor(x / barThreshold);
         //If we are not drawing anything for this pixel go to the next one
-        if (this.data[dIdx] && this.data[dIdx] > y && lastDIdx == dIdx) {
+        if (this.data[dIdx] && this.data[dIdx] > y) {
           //Set the colors
           png.data[idx] = this.color.r;  //R
           png.data[idx + 1] = this.color.g; //G
@@ -54,7 +54,7 @@ nodeHistogram.prototype.generatePNG = function (callback) {
         if (this.mirror) {
           idx = (this.width * (y + this.height / 2) + (this.width - x)) << 2;
           //If we are not drawing anything for this pixel go to the next one
-          if (this.data[dIdx] && this.data[dIdx] > y && lastDIdx == dIdx) {
+          if (this.data[dIdx] && this.data[dIdx] > y) {
             //Set the colors
             png.data[idx] = this.color.r;  //R
             png.data[idx + 1] = this.color.g; //G
